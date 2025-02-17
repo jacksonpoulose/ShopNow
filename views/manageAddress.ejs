@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- molla/dashboard.html  22 Nov 2019 10:03:13 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>ShopNow Online Clothing Store</title>
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Molla - Bootstrap eCommerce Template" />
+    <meta name="author" content="p-themes" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/icons/site.html" />
+    <link
+      rel="mask-icon"
+      href="/assets/images/icons/safari-pinned-tab.svg"
+      color="#666666"
+    />
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="Molla" />
+    <meta name="application-name" content="Molla" />
+    <meta name="msapplication-TileColor" content="#cc9966" />
+    <meta
+      name="msapplication-config"
+      content="/assets/images/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="header-left">
+              <div class="header-dropdown">
+                <a href="#">Usd</a>
+                <div class="header-menu">
+                  <ul>
+                    <li><a href="#">Eur</a></li>
+                    <li><a href="#">Usd</a></li>
+                  </ul>
+                </div>
+                <!-- End .header-menu -->
+              </div>
+              <!-- End .header-dropdown -->
+
+              <div class="header-dropdown">
+                <a href="#">Eng</a>
+                <div class="header-menu">
+                  <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">Spanish</a></li>
+                  </ul>
+                </div>
+                <!-- End .header-menu -->
+              </div>
+              <!-- End .header-dropdown -->
+            </div>
+            <!-- End .header-left -->
+
+            <div class="header-right">
+              <ul class="top-menu">
+                <li>
+                  <a href="#">Links</a>
+                  <ul>
+                    <li>
+                      <a href="tel:#"
+                        ><i class="icon-phone"></i>Call: +0123 456 789</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/user/wishlist"
+                        ><i class="icon-heart-o"></i>Wishlist
+                      </a>
+                    </li>
+
+                    <li>
+                      <% if (user) { %>
+
+                      <ul>
+                        <li>
+                          <a href="/user/logout" class="nav-link"
+                            ><i class="icon-user"></i>Logout</a
+                          >
+                        </li>
+                      </ul>
+
+                      <% } else { %>
+                      <ul>
+                        <li>
+                          <a href="/login"><i class="icon-user"></i>Login</a>
+                        </li>
+                      </ul>
+                      <% } %>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- End .top-menu -->
+            </div>
+            <!-- End .header-right -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .header-top -->
+
+        <div class="header-middle sticky-header">
+          <div class="container">
+            <div class="header-left">
+              <button class="mobile-menu-toggler">
+                <span class="sr-only">Toggle mobile menu</span>
+                <i class="icon-bars"></i>
+              </button>
+
+              <a href="/" class="logo">
+                <img
+                  src="/assets/images/demos/demo-6/ShopNow-Logo.png"
+                  alt="Molla Logo"
+                  width="105"
+                  height="25"
+                />
+              </a>
+
+              <nav class="main-nav">
+                <ul class="menu sf-arrows">
+                  <li class="megamenu-container">
+                    <a href="/" class="sf">Women</a>
+                  </li>
+                  <li class="megamenu-container">
+                    <a href="/" class="sf">Men</a>
+                  </li>
+                  <li class="megamenu-container">
+                    <a href="/" class="sf">Kids</a>
+                  </li>
+                  <li class="megamenu-container">
+                    <a href="/" class="sf">New Arrivals</a>
+                  </li>
+                  <li class="megamenu-container">
+                    <a href="/" class="sf">Sale</a>
+                  </li>
+                </ul>
+                <!-- End .menu -->
+              </nav>
+              <!-- End .main-nav -->
+            </div>
+            <!-- End .header-left -->
+
+            <div class="header-right">
+              <div class="header-search">
+                <a href="#" class="search-toggle" role="button" title="Search"
+                  ><i class="icon-search"></i
+                ></a>
+                <form action="#" method="get">
+                  <div class="header-search-wrapper">
+                    <label for="q" class="sr-only">Search</label>
+                    <input
+                      type="search"
+                      class="form-control"
+                      name="q"
+                      id="q"
+                      placeholder="Search in..."
+                      required
+                    />
+                  </div>
+                  <!-- End .header-search-wrapper -->
+                </form>
+              </div>
+              <!-- End .header-search -->
+
+              <div class="dropdown cart-dropdown">
+                <a
+                  href="/user/cart"
+                  class="dropdown-toggle"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-display="static"
+                >
+                  <i class="icon-shopping-cart"></i>
+                </a>
+              </div>
+              <!-- End .cart-dropdown -->
+            </div>
+            <!-- End .header-right -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .header-middle -->
+      </header>
+      <!-- End .header -->
+
+      <main class="main">
+        <div
+          class="page-header text-center"
+          style="background-image: url('/assets/images/page-header-bg.jpg')"
+        >
+          <div class="container">
+            <h1 class="page-title">My Addresses<span>Shop</span></h1>
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .page-header -->
+        <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/user">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                My Addresses
+              </li>
+            </ol>
+          </div>
+          <!-- End .container -->
+        </nav>
+        <!-- End .breadcrumb-nav -->
+
+        <div class="page-content">
+          <div class="dashboard">
+            <div class="container">
+             
+                
+                                                   
+                    
+
+                    <div
+                      class="tab-pane "
+                      id="tab-address"
+                      role="tabpanel"
+                      aria-labelledby="tab-address-link"
+                    >
+                      <p>
+                        The following addresses will be used on the checkout
+                        page by default.  
+                      </p>
+                   
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="card card-dashboard">
+                            <div class="card-body">
+                              <h3 class="card-title">Billing Address</h3>
+                              <!-- End .card-title -->
+
+                              <p>
+                                <%=user.name%><br />
+                                <%=user.email%><br />
+                                <%=user.billing%><br />
+                                
+                                <a href="#">Edit <i class="icon-edit"></i></a>
+                              </p>
+                            </div>
+                            <!-- End .card-body -->
+                          </div>
+                          <!-- End .card-dashboard -->
+                          <h3 class="card-title">Shipping Addresses</h3>
+                              <!-- End .card-title -->
+
+
+                                               
+
+                            <% if (addresses.length > 0) { %>
+                              <ul>
+                                  <% addresses.forEach(address => { %>
+                                    <div class="card-body">  
+                                      <li>
+                                          <%= address.name %><br>
+                                          <%= address.street %>,<br>
+                                           <%= address.city %>, <br>
+                                           <%= address.state %> - <%= address.zip %>
+                                      </li>
+                                      <a href="#">Set as default </a>|<a href="#">Edit </a>|<a href="#">Remove </a>
+                                    </p>
+                                  </div>
+                                  <% }) %>
+                              </ul>
+                          <% } else { %>
+                              <p>No addresses found. Add a new address!</p>
+                          <% } %>
+                              
+                             
+                          
+                        </div>
+                        <!-- End .col-lg-6 -->
+
+
+
+
+
+                        <div class="col-lg-6">
+                          <div class="card card-dashboard">
+                            <div class="card-body">
+                              <h3 class="card-title">Add New Address</h3>
+                              <!-- End .card-title -->
+                              <form id="add-address-form">
+                                <span id="nameError" style="color: red;"></span>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="street">Street Address:</label>
+                                    <input type="text" class="form-control" id="street" name="street" required>
+                                </div>
+                                <span id="cityError" style="color: red;"></span>
+                                <div class="form-group">
+                                    <label for="city">City:</label>
+                                    <input type="text" class="form-control" id="city" name="city" required>
+                                </div>
+                                <span id="stateError" style="color: red;"></span>
+                                <div class="form-group">
+                                    <label for="state">State:</label>
+                                    <input type="text" class="form-control" id="state" name="state" required>
+                                </div>
+                                <span id="zipError" style="color: red;"></span>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code:</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" required>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-outline-primary-2">
+                                    <span>Save</span>
+                                </button>
+                            </form>
+                            
+                            <script>
+
+                              const addressForm = document.getElementById('add-address-form')
+                              const nameInput = document.getElementById('name');
+                              const cityInput = document.getElementById('city');
+                              const stateInput = document.getElementById('state')
+                              const zipInput = document.getElementById('zip')
+
+                              const nameError = document.getElementById('nameError')
+                              const cityError = document.getElementById('cityError')
+                              const stateError = document.getElementById('stateError');
+                              const zipError = document.getElementById('zipError')
+                                // JavaScript Fetch Function
+                                addressForm.addEventListener('submit', async (e) => {
+                                    e.preventDefault();
+                            
+                                    nameError.textContent = '';
+                                    cityError.textContent = '';
+                                    stateError.textContent = '';
+                                   zipError.textContent = '';
+
+                                   const name = nameInput.value.trim();
+                                   const city = cityInput.value.trim();
+                                   const state = stateInput.value.trim()
+                                   const zip = zipInput.value.trim()
+
+                                   const zipRegex = /^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/i;
+                                    
+
+                              let isValid = true;
+
+// Validation checks
+if (name.length < 5) {
+    nameError.textContent = 'Name must be at least 5 characters long.';
+    isValid = false;
+}
+if (city.length < 3) {
+    cityError.textContent = 'Enter a valid city name.';
+  
+    isValid = false;
+}
+if (state.length < 2) {
+    stateError.textContent = 'State must be at least 2 characters long.';
+  
+    isValid = false;
+}
+if (!zipRegex.test(zip)) {
+    zipError.textContent = 'Please enter a valid ZIP code (e.g., 12345 or 12345-6789).';
+    
+    isValid = false;
+}
+
+if (!isValid) return; 
+
+
+                                    const formData = new FormData(e.target);
+                                    const formObject = {};
+                                    formData.forEach((value, key) => {
+                                        formObject[key] = value;
+                                    });
+                            
+                                    try {
+                                        const response = await fetch('/user/address/add', {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify(formObject)
+                                        });
+                            
+                                        const result = await response.json();
+                            
+                                        if (response.ok) {
+                                            alert(result.message);
+                                            e.target.reset(); // Clear the form on success
+                                        } else {
+                                            alert(`Error: ${result.message}`);
+                                        }
+                                    } catch (error) {
+                                        console.error('Error submitting form:', error);
+                                        alert('An error occurred. Please try again.');
+                                    }
+                                });
+                            </script>
+                            
+                    </div>
+                    <!-- .End .tab-pane -->
+                  </div>
+                </div>
+                <!-- End .col-lg-9 -->
+              </div>
+              <!-- End .row -->
+            </div>
+            <!-- End .container -->
+          </div>
+          <!-- End .dashboard -->
+        </div>
+        <!-- End .page-content -->
+      </main>
+      <!-- End .main -->
+
+      <footer class="footer">
+        <div class="footer-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget widget-about">
+                  <img
+                    src="/assets/images/demos/demo-6/ShopNow-Logo.png"
+                    class="footer-logo"
+                    alt="Footer Logo"
+                    width="105"
+                    height="25"
+                  />
+                  <p>
+                    Praesent dapibus, neque id cursus ucibus, tortor neque
+                    egestas augue, eu vulputate magna eros eu erat.
+                  </p>
+
+                  <div class="social-icons">
+                    <a
+                      href="#"
+                      class="social-icon"
+                      target="_blank"
+                      title="Facebook"
+                      ><i class="icon-facebook-f"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="social-icon"
+                      target="_blank"
+                      title="Twitter"
+                      ><i class="icon-twitter"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="social-icon"
+                      target="_blank"
+                      title="Instagram"
+                      ><i class="icon-instagram"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="social-icon"
+                      target="_blank"
+                      title="Youtube"
+                      ><i class="icon-youtube"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="social-icon"
+                      target="_blank"
+                      title="Pinterest"
+                      ><i class="icon-pinterest"></i
+                    ></a>
+                  </div>
+                  <!-- End .soial-icons -->
+                </div>
+                <!-- End .widget about-widget -->
+              </div>
+              <!-- End .col-sm-6 col-lg-3 -->
+
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4 class="widget-title">Useful Links</h4>
+                  <!-- End .widget-title -->
+
+                  <ul class="widget-list">
+                    <li><a href="about.html">About ShopNow</a></li>
+                    <li><a href="#">How to shop on ShopNow</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="/login">Log in</a></li>
+                  </ul>
+                  <!-- End .widget-list -->
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-sm-6 col-lg-3 -->
+
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4 class="widget-title">Customer Service</h4>
+                  <!-- End .widget-title -->
+
+                  <ul class="widget-list">
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Money-back guarantee!</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                  <!-- End .widget-list -->
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-sm-6 col-lg-3 -->
+
+              <div class="col-sm-6 col-lg-3">
+                <div class="widget">
+                  <h4 class="widget-title">My Account</h4>
+                  <!-- End .widget-title -->
+
+                  <ul class="widget-list">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="cart.html">View Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Help</a></li>
+                  </ul>
+                  <!-- End .widget-list -->
+                </div>
+                <!-- End .widget -->
+              </div>
+              <!-- End .col-sm-6 col-lg-3 -->
+            </div>
+            <!-- End .row -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .footer-middle -->
+
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="footer-copyright">
+              Copyright © 2019 Molla Store. All Rights Reserved.
+            </p>
+            <!-- End .footer-copyright -->
+            <figure class="footer-payments">
+              <img
+                src="/assets/images/payments.png"
+                alt="Payment methods"
+                width="272"
+                height="20"
+              />
+            </figure>
+            <!-- End .footer-payments -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .footer-bottom -->
+      </footer>
+      <!-- End .footer -->
+    </div>
+    <!-- End .page-wrapper -->
+    <button id="scroll-top" title="Back to Top">
+      <i class="icon-arrow-up"></i>
+    </button>
+
+   <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const addToCartButton = document.getElementById('add-to-cart-button');
+
+      if(addToCartButton){
+        addToCartButton.addEventListener('click',async(event)=>{
+          event.preventDefault();
+
+          const productId = addToCartButton.getAttribute('data-id');
+          const url = `/user/add-to-cart/${productId}`;
+
+          try{
+            const response = await fetch(url,{
+              method:"POST",
+              headers:{
+                'Content-Type':'application/json',
+              },
+              body:JSON.stringify({productId}),
+            });
+
+            if(!response.ok){
+              throw new Error('Failed to add to cart')
+            }
+            const result = await response.json();
+            if(result.success){
+              alert('Item added to cart successfully')
+            }else{
+              alert('Error adding item to cart:'+result.message)
+            }
+          }catch(error){
+            console.error('Error:',error)
+          }
+        })
+      }
+    })
+   </script>
+
+    <!-- Plugins JS File -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/assets/js/superfish.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+
+  <!-- molla/dashboard.html  22 Nov 2019 10:03:13 GMT -->
+</html>
