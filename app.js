@@ -12,6 +12,8 @@ const authRoutes =require('./routes/authRoutes');
 const adminRoutes =require('./routes/adminRoutes');
 const userRoutes =require('./routes/userRoutes');
 
+const serverless = require("serverless-http");
+
 //configure env
 dotenv.config();
 
@@ -74,3 +76,7 @@ app.listen(PORT, () => {
     console.log(
       `Server Running in ${process.env.DEV_MODE} mode on port ${PORT}`);
   })
+
+  module.exports = app;
+
+  module.exports.handler = serverless(app);

@@ -37,6 +37,7 @@
     "passport-google-oauth2": "^0.2.0",
     "passport-google-oauth20": "^2.0.0",
     "paypal-rest-sdk": "^1.8.1",
-    "pdfkit": "^0.16.0"
+    "pdfkit": "^0.16.0",
+    "serverless-http": "^4.0.0"
   }
 }
